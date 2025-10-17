@@ -19,7 +19,8 @@ SRC = ./ft_isalnum.c \
 		./ft_memcmp.c \
 		./ft_strnstr.c \
 		./ft_atoi.c \
-		./ft_calloc.c
+		./ft_calloc.c \
+		./ft_strdup.c
 CC = cc
 CFLAGS += -Wall -Werror -Wextra
 NAME = libft.a
