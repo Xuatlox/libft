@@ -6,7 +6,7 @@
 /*   By: ansimonn <ansimonn@student.42angouleme.f>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 11:41:12 by ansimonn          #+#    #+#             */
-/*   Updated: 2025/10/21 12:17:32 by ansimonn         ###   ########.fr       */
+/*   Updated: 2025/10/21 16:13:15 by ansimonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static int	count_parts(char const *s, char const c)
 	return (res);
 }
 
-static char const	*find_part(char const *s, const char c, int ref)
+static char	*find_part(char const *s, const char c, int ref)
 {
 	int		i;
 
@@ -80,11 +80,11 @@ char	**ft_split(char const *s, char c)
 {
 	int			i;
 	int			j;
-	char const	*part;
+	char		*part;
 	char		**res;
 
 	i = 0;
-	res = malloc(ft_strlen(s) + count_parts(s, c) + 1);
+	res = malloc((count_parts(s, c) + 1) * sizeof(char *));
 	if (!res)
 		return (NULL);
 	while (i < count_parts(s, c))
