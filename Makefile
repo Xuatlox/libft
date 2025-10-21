@@ -23,6 +23,7 @@ SRC = ./ft_isalnum.c \
 		./ft_strdup.c \
 		./ft_substr.c \
 		./ft_strjoin.c \
+		./ft_split.c \
 		./ft_strtrim.c
 CC = cc
 CFLAGS += -Wall -Werror -Wextra
