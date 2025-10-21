@@ -25,7 +25,8 @@ SRC = ./ft_isalnum.c \
 		./ft_strjoin.c \
 		./ft_split.c \
 		./ft_strtrim.c \
-		./ft_itoa.c
+		./ft_itoa.c \
+		./ft_strmapi.c
 CC = cc
 CFLAGS += -Wall -Werror -Wextra
 NAME = libft.a
