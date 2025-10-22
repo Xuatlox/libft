@@ -6,7 +6,7 @@
 /*   By: ansimonn <ansimonn@student.42angouleme.f>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 17:00:59 by ansimonn          #+#    #+#             */
-/*   Updated: 2025/10/21 14:39:34 by ansimonn         ###   ########.fr       */
+/*   Updated: 2025/10/22 10:16:11 by ansimonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ static char	*trim(char const *s1, int const start, int const end)
 		res = ft_calloc(1, sizeof(char));
 	else
 		res = ft_calloc(end - start + 2, sizeof(char));
+	if (!res)
+		return (NULL);
 	while (start + i <= end)
 	{
 		res[i] = s1[start + i];
