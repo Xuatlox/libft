@@ -6,7 +6,7 @@
 /*   By: ansimonn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/05 11:34:43 by ansimonn          #+#    #+#             */
-/*   Updated: 2025/10/14 12:01:35 by ansimonn         ###   ########.fr       */
+/*   Updated: 2025/10/22 17:04:32 by ansimonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlen(const char *s)
 	size_t	i;
 
 	i = 0;
+	if (!s)
+		return (0);
 	while (s[i])
 		i++;
 	return (i);
