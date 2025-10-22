@@ -32,10 +32,12 @@ SRC = ./ft_isalnum.c \
 		./ft_putstr_fd.c \
 		./ft_putendl_fd.c \
 		./ft_putnbr_fd.c
+BONUS = ./ft_lstnew.c
 CC = cc
 CFLAGS += -Wall -Werror -Wextra
 NAME = libft.a
 OBJ = $(SRC:.c=.o)
+BONUS_OBJ = $(BONUS:.c=.o)
 
 $(NAME) : $(SRC)
 	$(CC) -c $(SRC)
@@ -50,3 +52,7 @@ fclean : clean
 	rm -rf $(NAME)
 
 re : fclean $(NAME)
+
+bonus : $(SRC) $(BONUS)
+	$(CC) -c $(SRC) $(BONUS)
+	ar -rcs $(NAME) $(OBJ) $(BONUS_OBJ)

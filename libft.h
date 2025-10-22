@@ -6,7 +6,7 @@
 /*   By: ansimonn <ansimonn@student.42angouleme.f>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 12:24:16 by ansimonn          #+#    #+#             */
-/*   Updated: 2025/10/22 10:20:43 by ansimonn         ###   ########.fr       */
+/*   Updated: 2025/10/22 10:51:10 by ansimonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}					t_list;
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -56,5 +50,15 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+
+//BONUS PART
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+
+t_list	*ft_lstnew(void *content);
 
 #endif //LIBFT_H
