@@ -6,7 +6,7 @@
 /*   By: ansimonn <ansimonn@student.42angouleme.f>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 17:00:59 by ansimonn          #+#    #+#             */
-/*   Updated: 2025/10/22 10:16:11 by ansimonn         ###   ########.fr       */
+/*   Updated: 2025/10/22 16:36:51 by ansimonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		end;
 	char	*res;
 
+	if (!s1 || !set)
+		return (NULL);
 	start = 0;
 	end = ft_strlen(s1) - 1;
 	reduce(s1, &start, &end, set);
