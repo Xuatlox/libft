@@ -6,7 +6,7 @@
 /*   By: ansimonn <ansimonn@student.42angouleme.f>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 11:41:12 by ansimonn          #+#    #+#             */
-/*   Updated: 2025/10/22 11:04:56 by ansimonn         ###   ########.fr       */
+/*   Updated: 2025/10/22 17:30:33 by ansimonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,8 @@ char	**ft_split(char const *s, char c)
 	char		**res;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	res = malloc((count_parts(s, c) + 1) * sizeof(char *));
 	if (!res)
 		return (NULL);
