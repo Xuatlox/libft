@@ -6,13 +6,11 @@
 /*   By: ansimonn <ansimonn@student.42angouleme.f>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 14:35:52 by ansimonn          #+#    #+#             */
-/*   Updated: 2025/10/17 15:21:10 by ansimonn         ###   ########.fr       */
+/*   Updated: 2025/10/22 10:23:07 by ansimonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
