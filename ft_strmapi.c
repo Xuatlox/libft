@@ -6,7 +6,7 @@
 /*   By: ansimonn <ansimonn@student.42angouleme.f>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 17:53:48 by ansimonn          #+#    #+#             */
-/*   Updated: 2025/10/22 17:45:04 by ansimonn         ###   ########.fr       */
+/*   Updated: 2025/10/22 17:47:28 by ansimonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		i;
 
 	i = 0;
-	if (!s)
+	if (!s || !f)
 		return (NULL);
 	res = malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!res)

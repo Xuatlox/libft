@@ -6,7 +6,7 @@
 /*   By: ansimonn <ansimonn@student.42angouleme.f>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 18:18:19 by ansimonn          #+#    #+#             */
-/*   Updated: 2025/10/21 18:25:49 by ansimonn         ###   ########.fr       */
+/*   Updated: 2025/10/22 17:47:48 by ansimonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	char	*res;
 	int		i;
 
+	if (!s || !f)
+		return ;
 	i = 0;
 	while (s[i])
 	{
