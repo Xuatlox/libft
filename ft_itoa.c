@@ -6,7 +6,7 @@
 /*   By: ansimonn <ansimonn@student.42angouleme.f>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 14:40:51 by ansimonn          #+#    #+#             */
-/*   Updated: 2025/10/21 17:52:59 by ansimonn         ###   ########.fr       */
+/*   Updated: 2025/10/23 17:09:17 by ansimonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,13 @@ static unsigned int	get_size(int n)
 	return (i + 1);
 }
 
-static void	fill_res(char *res, int n)
+static void	fill_res(char *res, int n, const int size)
 {
 	int		i;
 	int		neg;
 
-	i = get_size(n) - 1;
-	res[get_size(n)] = 0;
+	i = size - 1;
+	res[size] = 0;
 	neg = 0;
 	if (n < 0)
 	{
@@ -55,12 +55,14 @@ static void	fill_res(char *res, int n)
 char	*ft_itoa(int n)
 {
 	char	*res;
+	unsigned int	size;
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	res = malloc(get_size(n) + 1);
+	size = get_size(n);
+	res = malloc(size + 1);
 	if (!res)
 		return (NULL);
-	fill_res(res, n);
+	fill_res(res, n, size);
 	return (res);
 }

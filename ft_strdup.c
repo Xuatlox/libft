@@ -6,7 +6,7 @@
 /*   By: ansimonn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/18 10:27:41 by ansimonn          #+#    #+#             */
-/*   Updated: 2025/10/22 10:27:51 by ansimonn         ###   ########.fr       */
+/*   Updated: 2025/10/23 17:18:33 by ansimonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strdup(const char *s)
 	char	*dup;
 	int		i;
 
+	if (!s)
+		return (NULL);
 	dup = malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!dup)
 		return (NULL);
