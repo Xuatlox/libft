@@ -6,7 +6,7 @@
 /*   By: ansimonn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 18:34:27 by ansimonn          #+#    #+#             */
-/*   Updated: 2025/10/23 17:10:15 by ansimonn         ###   ########.fr       */
+/*   Updated: 2025/10/24 08:50:04 by ansimonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,9 @@ static void	add_digits(const char *digits, int *res)
 	int		i;
 
 	i = 0;
-	mul = 1;
 	while (digits[i] >= '0' && digits[i] <= '9')
 	{
-		res = res * 10 + digits[i] - '0';
+		*res = *res * 10 + digits[i] - '0';
 		i++;
 	}
 }
