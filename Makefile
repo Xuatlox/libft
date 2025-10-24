@@ -47,11 +47,11 @@ NAME = libft.a
 OBJ = $(SRC:.c=.o)
 BONUS_OBJ = $(BONUS:.c=.o)
 
+all : $(NAME)
+
 $(NAME) : $(SRC)
 	$(CC) -c $(SRC)
 	ar -rcs $(NAME) $(OBJ)
-
-all : $(NAME)
 
 clean :
 	rm -rf *.o
