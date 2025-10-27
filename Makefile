@@ -46,6 +46,7 @@ CFLAGS += -Wall -Werror -Wextra
 NAME = libft.a
 OBJ = $(SRC:.c=.o)
 BONUS_OBJ = $(BONUS:.c=.o)
+.PHONY : all clean fclean re bonus
 
 all : $(NAME)
 
@@ -54,7 +55,7 @@ $(NAME) : $(SRC)
 	ar -rcs $(NAME) $(OBJ)
 
 clean :
-	rm -rf *.o
+	rm -rf $(OBJ)
 
 fclean : clean
 	rm -rf $(NAME)

@@ -6,7 +6,7 @@
 /*   By: ansimonn <ansimonn@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 12:03:38 by ansimonn          #+#    #+#             */
-/*   Updated: 2025/10/15 09:08:01 by ansimonn         ###   ########.fr       */
+/*   Updated: 2025/10/27 17:49:45 by ansimonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		((char *)s)[i] = c;
+		((char *)s)[i] = (char) c;
 		i++;
 	}
 	return (s);

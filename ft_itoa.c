@@ -6,9 +6,11 @@
 /*   By: ansimonn <ansimonn@student.42angouleme.f>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 14:40:51 by ansimonn          #+#    #+#             */
-/*   Updated: 2025/10/27 13:15:38 by ansimonn         ###   ########.fr       */
+/*   Updated: 2025/10/27 17:41:40 by ansimonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 #include "libft.h"
 
@@ -58,7 +60,10 @@ char	*ft_itoa(int n)
 	unsigned int	size;
 
 	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
+	{
+		res = ft_strdup("-2147483648");
+		return (res);
+	}
 	size = get_size(n);
 	res = malloc(size + 1);
 	if (!res)

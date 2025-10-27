@@ -6,7 +6,7 @@
 /*   By: ansimonn <ansimonn@student.42angouleme.f>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 17:00:59 by ansimonn          #+#    #+#             */
-/*   Updated: 2025/10/22 16:36:51 by ansimonn         ###   ########.fr       */
+/*   Updated: 2025/10/27 18:15:52 by ansimonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ static char	*trim(char const *s1, int const start, int const end)
 		res[i] = s1[start + i];
 		i++;
 	}
-	res[i] = 0;
 	return (res);
 }
 
