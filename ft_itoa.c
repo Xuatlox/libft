@@ -6,7 +6,7 @@
 /*   By: ansimonn <ansimonn@student.42angouleme.f>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 14:40:51 by ansimonn          #+#    #+#             */
-/*   Updated: 2025/10/23 17:09:17 by ansimonn         ###   ########.fr       */
+/*   Updated: 2025/10/27 13:15:38 by ansimonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static void	fill_res(char *res, int n, const int size)
 
 char	*ft_itoa(int n)
 {
-	char	*res;
+	char			*res;
 	unsigned int	size;
 
 	if (n == -2147483648)
