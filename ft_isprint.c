@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ansimonn <ansimonn@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ansimonn <ansimonn@student.42angouleme.f>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/14 11:45:43 by ansimonn          #+#    #+#             */
-/*   Updated: 2025/10/14 11:47:13 by ansimonn         ###   ########.fr       */
+/*   Created: 2025/10/24 10:43:59 by ansimonn          #+#    #+#             */
+/*   Updated: 2025/10/28 10:50:15 by ansimonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	if (c >= 32 && c <= 126)
+	if (c >= ' ' && c <= '~')
 		return (16384);
 	return (0);
 }

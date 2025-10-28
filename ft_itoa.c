@@ -5,12 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ansimonn <ansimonn@student.42angouleme.f>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/21 14:40:51 by ansimonn          #+#    #+#             */
-/*   Updated: 2025/10/27 17:41:40 by ansimonn         ###   ########.fr       */
+/*   Created: 2025/10/24 10:43:59 by ansimonn          #+#    #+#             */
+/*   Updated: 2025/10/28 10:50:25 by ansimonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 
 #include "libft.h"
 

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ansimonn <ansimonn@student.42angouleme.f>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/20 11:41:12 by ansimonn          #+#    #+#             */
-/*   Updated: 2025/10/28 10:22:00 by ansimonn         ###   ########.fr       */
+/*   Created: 2025/10/24 10:43:59 by ansimonn          #+#    #+#             */
+/*   Updated: 2025/10/28 10:58:28 by ansimonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,12 +65,9 @@ static void	fill_part(char *res, char const *part, char c)
 	}
 }
 
-static char	**desalloc(char **res, int const size)
+static char	**desalloc(char **res, int i)
 {
-	int		i;
-
-	i = 0;
-	while (i < size)
+	while (res[i])
 	{
 		free(res[i]);
 		i++;
@@ -81,28 +78,29 @@ static char	**desalloc(char **res, int const size)
 
 char	**ft_split(char const *s, char c)
 {
-	int		i;
 	int		part_size;
 	char	*part;
 	char	**res;
 	int		nb_parts;
 
-	i = 0;
 	nb_parts = count_parts(s, c);
 	if (!s)
 		return (NULL);
 	res = ft_calloc(nb_parts + 1, sizeof(char *));
 	if (!res)
 		return (NULL);
-	while (i < nb_parts)
+	while (nb_parts > 0)
 	{
 		part_size = 0;
-		part = (char *) find_part(s, c, i, &part_size);
-		res[i] = ft_calloc( part_size + 1, sizeof(char));
-		if (!res[i])
-			return (desalloc(res, i));
-		fill_part(res[i], part, c);
-		i++;
+		part = (char *) find_part(s, c, nb_parts - 1, &part_size);
+		res[nb_parts - 1] = ft_calloc(part_size + 1, sizeof(char));
+		if (!res[nb_parts - 1])
+		{
+			desalloc(res, nb_parts);
+			return (NULL);
+		}
+		fill_part(res[nb_parts - 1], part, c);
+		nb_parts--;
 	}
 	return (res);
 }
