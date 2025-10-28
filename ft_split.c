@@ -6,7 +6,7 @@
 /*   By: ansimonn <ansimonn@student.42angouleme.f>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 11:41:12 by ansimonn          #+#    #+#             */
-/*   Updated: 2025/10/27 18:34:41 by ansimonn         ###   ########.fr       */
+/*   Updated: 2025/10/28 10:22:00 by ansimonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static int	count_parts(char const *s, char const c)
 	return (res);
 }
 
-static const char	*find_part(char const *s, const char c, int ref)
+static const char	*find_part(char const *s, const char c, int ref, int *size)
 {
 	int		i;
 
@@ -46,15 +46,19 @@ static const char	*find_part(char const *s, const char c, int ref)
 			i++;
 		ref--;
 	}
+	while (s[i + *size] && s[i + *size] != c)
+	{
+		(*size)++;
+	}
 	return (&s[i]);
 }
 
-static void	fill_part(char *res, char const *part, int const size)
+static void	fill_part(char *res, char const *part, char c)
 {
 	int		i;
 
 	i = 0;
-	while (i < size)
+	while (part[i] && part[i] != c)
 	{
 		res[i] = part[i];
 		i++;
@@ -78,7 +82,7 @@ static char	**desalloc(char **res, int const size)
 char	**ft_split(char const *s, char c)
 {
 	int		i;
-	int		j;
+	int		part_size;
 	char	*part;
 	char	**res;
 	int		nb_parts;
@@ -92,12 +96,12 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	while (i < nb_parts)
 	{
-		j = 0;
-		part = (char *) find_part(s, c, i);
-		res[i] = ft_calloc(j + 1, sizeof(char));
+		part_size = 0;
+		part = (char *) find_part(s, c, i, &part_size);
+		res[i] = ft_calloc( part_size + 1, sizeof(char));
 		if (!res[i])
 			return (desalloc(res, i));
-		fill_part(res[i], part, j);
+		fill_part(res[i], part, c);
 		i++;
 	}
 	return (res);
